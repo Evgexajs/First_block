@@ -10,39 +10,43 @@
 }
 
 .block {
-    margin: 15px 15px;
+    margin: 16px 15px;
     position: relative;    
-    
     .block_top &__img {
+        text-align: center;
         position: static;
-        max-width: none;
+        img {max-width: none;}
     }
 
     &__img {
         position: absolute;
-        right: 4px;
+        right: 0px;
         & img{max-width: 40vw;}
     }
 
     &__content {
         padding: 9px 20px;
-        border: 1px solid #ff6666;
+        outline: 1px solid #ff6666;
         transition: all 0.25s ease;
         box-shadow: 5px 5px 20px 0px #f8f8f8;
+        min-height: 230px;
+        .block_top &{
+            min-height: 510px;
+        }
         &:hover {        
-            border: 3px solid #ff6666;
+            outline: 3px solid #ff6666;
             .block__text {text-decoration: underline;}
         }
         .block_more50 & {
-            border: 1px solid #ff931d;
+            outline: 1px solid #ff931d;
             &:hover {        
-                border: 3px solid #ff931d;
+                outline: 3px solid #ff931d;
             }
         }
         .block_more30 & {
-            border: 1px solid #ffbe17;
+            outline: 1px solid #ffbe17;
             &:hover {        
-                border: 3px solid #ffbe17;
+                outline: 3px solid #ffbe17;
             }
         }
     }
@@ -69,34 +73,37 @@
         }
     }
 
+    &__center {
+        padding: 0px 20px 9px 0px;
+        position: absolute;
+        bottom: 0px;
+    }
+
     &__price {
         .block_top & {margin-top: 34px;}
-        position: relative;
         border-bottom: dashed 2px #e6e6e6;
         &_last {
             .block_top & {font-size: 25pt;}
+            display: inline-block;
             font-size: 21pt;
             p {color: #ff6666;}
         }
         &_old {
-            position: absolute;
-            left: 110px;
-            bottom: 5px;
             font-size: 13pt;
-            &:before {
+            display: inline-block;
+            &::before {
                 content: "";
                 border-bottom: 2px solid #878787;
                 position: absolute;
-                width: 100%;
-                height: 50%;
+                width: 55px;
+                height: 10px;
                 transform: rotate(12deg);
             }
         }
         &_text {
-            position: absolute;
-            right: 5px;
-            bottom: 5px;
             font-size: 13pt;
+            float: right;
+            padding-top: 14px;
         }
     }
 
@@ -116,11 +123,11 @@
         display: flex;
         justify-content: space-around;
         p {
-            padding-right: 7.5%;
-            padding-left: 5%;
-            border-right: 1px solid #e6e6e6;
-            text-align: center;
             font-size: 13pt;
+        }
+        &_rectangle {
+            width: 1px;
+            background: #d8d8d8;
         }
     }
     
@@ -133,38 +140,41 @@
             & img{max-width: 60vw;}
             .block_top & img{max-width: 60vw;}
         }
-        &__price_text {
-            display: none;
+        &__price_text {float: none;}
+        &__center {position: relative;}
+        &__content {
+            min-height: 0;
+            .block_top &{
+                min-height: 0;
+            }
         }
     }
-    
+    @media (min-width: 640px) and (max-width: 768px) {
+        &__center {max-width: 90vw;}
+    }
 }
 
 .product-list {
-    @media (min-width: 768px) and (max-width: 992px) {
+    @media (min-width: 768px) and (max-width: 999px) {
         & {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(auto-fill, 1fr);
             & .block_top {
                 grid-row: 1/3;
-                align-self:center;
             }
-            .block {align-self:center;}
             .block__img img{max-width: 15vw;}
             .block_top .block__img img{max-width: none;}
         }
     }
-    @media (min-width: 993px) and (max-width: 1200px) {
+    @media (min-width: 998px) and (max-width: 1200px) {
         & {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: repeat(auto-fill, 1fr);
             & .block_top {
                 grid-row: 1/3;
-                align-self:center;
             }
-            .block {align-self:center;}
             .block__img img{max-width: 10vw;}
             .block_top .block__img img{max-width: none;}
         }
@@ -177,7 +187,6 @@
             & .block_top {
                 grid-row: 1/3;
             }
-            .block {align-self:center;}
             .block__img img{max-width: 10vw;}
             .block_top .block__img img{max-width: none;}
         }

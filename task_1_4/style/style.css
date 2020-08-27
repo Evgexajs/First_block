@@ -10,18 +10,22 @@
 }
 
 .block {
-  margin: 15px 15px;
+  margin: 16px 15px;
   position: relative;
 }
 
 .block_top .block__img {
+  text-align: center;
   position: static;
+}
+
+.block_top .block__img img {
   max-width: none;
 }
 
 .block__img {
   position: absolute;
-  right: 4px;
+  right: 0px;
 }
 
 .block__img img {
@@ -30,15 +34,20 @@
 
 .block__content {
   padding: 9px 20px;
-  border: 1px solid #ff6666;
+  outline: 1px solid #ff6666;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   -webkit-box-shadow: 5px 5px 20px 0px #f8f8f8;
           box-shadow: 5px 5px 20px 0px #f8f8f8;
+  min-height: 230px;
+}
+
+.block_top .block__content {
+  min-height: 510px;
 }
 
 .block__content:hover {
-  border: 3px solid #ff6666;
+  outline: 3px solid #ff6666;
 }
 
 .block__content:hover .block__text {
@@ -46,19 +55,19 @@
 }
 
 .block_more50 .block__content {
-  border: 1px solid #ff931d;
+  outline: 1px solid #ff931d;
 }
 
 .block_more50 .block__content:hover {
-  border: 3px solid #ff931d;
+  outline: 3px solid #ff931d;
 }
 
 .block_more30 .block__content {
-  border: 1px solid #ffbe17;
+  outline: 1px solid #ffbe17;
 }
 
 .block_more30 .block__content:hover {
-  border: 3px solid #ffbe17;
+  outline: 3px solid #ffbe17;
 }
 
 .block_top .block__circle {
@@ -95,8 +104,13 @@
   color: white;
 }
 
+.block__center {
+  padding: 0px 20px 9px 0px;
+  position: absolute;
+  bottom: 0px;
+}
+
 .block__price {
-  position: relative;
   border-bottom: dashed 2px #e6e6e6;
 }
 
@@ -105,6 +119,7 @@
 }
 
 .block__price_last {
+  display: inline-block;
   font-size: 21pt;
 }
 
@@ -117,27 +132,24 @@
 }
 
 .block__price_old {
-  position: absolute;
-  left: 110px;
-  bottom: 5px;
   font-size: 13pt;
+  display: inline-block;
 }
 
-.block__price_old:before {
+.block__price_old::before {
   content: "";
   border-bottom: 2px solid #878787;
   position: absolute;
-  width: 100%;
-  height: 50%;
+  width: 55px;
+  height: 10px;
   -webkit-transform: rotate(12deg);
           transform: rotate(12deg);
 }
 
 .block__price_text {
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
   font-size: 13pt;
+  float: right;
+  padding-top: 14px;
 }
 
 .block__text {
@@ -167,11 +179,12 @@
 }
 
 .block__footer p {
-  padding-right: 7.5%;
-  padding-left: 5%;
-  border-right: 1px solid #e6e6e6;
-  text-align: center;
   font-size: 13pt;
+}
+
+.block__footer_rectangle {
+  width: 1px;
+  background: #d8d8d8;
 }
 
 @media (max-width: 330px) {
@@ -188,11 +201,26 @@
     max-width: 60vw;
   }
   .block__price_text {
-    display: none;
+    float: none;
+  }
+  .block__center {
+    position: relative;
+  }
+  .block__content {
+    min-height: 0;
+  }
+  .block_top .block__content {
+    min-height: 0;
   }
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 640px) and (max-width: 768px) {
+  .block__center {
+    max-width: 90vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
   .product-list {
     display: -ms-grid;
     display: grid;
@@ -205,14 +233,6 @@
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     grid-row: 1/3;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-  .product-list .block {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
   }
   .product-list .block__img img {
     max-width: 15vw;
@@ -222,7 +242,7 @@
   }
 }
 
-@media (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 998px) and (max-width: 1200px) {
   .product-list {
     display: -ms-grid;
     display: grid;
@@ -235,14 +255,6 @@
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     grid-row: 1/3;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-  .product-list .block {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
   }
   .product-list .block__img img {
     max-width: 10vw;
@@ -265,11 +277,6 @@
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     grid-row: 1/3;
-  }
-  .product-list .block {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
   }
   .product-list .block__img img {
     max-width: 10vw;
