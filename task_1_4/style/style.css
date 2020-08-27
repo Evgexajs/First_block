@@ -216,7 +216,7 @@
 
 @media (min-width: 640px) and (max-width: 768px) {
   .block__center {
-    max-width: 90vw;
+    width: 90vw;
   }
 }
 
