@@ -11,13 +11,13 @@
 
 .block {
     margin: 16px 15px;
-    .block_best &__img {
-        float: none;
-        text-align: center;
-        img {max-width: none;}
-    }
 
     &__img {
+        .block_best & {
+            margin-top: -27px;
+            float: none;
+            text-align: center;
+        }
         float: right;
         & img{max-width: 40vw;}
     }
@@ -30,10 +30,6 @@
         outline: 1px solid #ff6666;
         transition: all 0.25s ease;
         box-shadow: 5px 5px 20px 0px #f8f8f8;
-        min-height: 250px;
-        .block_best &{
-            min-height: 550px;
-        }
         &:hover {        
             outline: 3px solid #ff6666;
             .block__text {text-decoration: underline;}
@@ -52,8 +48,11 @@
         }
     }
 
-    &__circle {
+    &__top {
         margin-left: -8px;
+    }
+
+    &__circle {
         width: 58px;
         height: 58px;
         border-radius: 50%;
@@ -100,7 +99,7 @@
 
     &__text {
         .block_best & {margin: 16px 0px 20px 0px;}
-        margin: 15px 0px 15px 0px;
+        margin: 15px 0px 15px 8px;
         p {            
             width: 60%;
             font-size: 14pt;
@@ -138,9 +137,15 @@
                 min-height: 0;
             }
         }
+        .block_best &__img {
+            margin-top: 0px;
+        }
     }
-    @media (min-width: 640px) and (max-width: 768px) {
+    @media (min-width: 640px) and (max-width: 836px) {
         &__center {width: 90vw;}
+        .block_best &__img {
+            margin-top: -5px;
+        }
     }
 }
 
@@ -167,6 +172,16 @@
             }
             .block__img img{max-width: 10vw;}
             .block_best .block__img img{max-width: none;}
+            .block_best .block__img {
+                margin: -7px 0px 0px 47px;
+            }
+        }
+    }
+    @media (min-width: 998px) and (max-width: 1009px) {
+        & {
+            .block_best .block__img {
+                margin: 38px 0px 0px 47px;
+            }
         }
     }
     @media (min-width: 1200px){
@@ -179,6 +194,8 @@
             }
             .block__img img{max-width: 10vw;}
             .block_best .block__img img{max-width: none;}
+            
+            
         }
     }
 }
