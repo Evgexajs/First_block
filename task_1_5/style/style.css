@@ -25,6 +25,11 @@
   min-height: 68vh;
 }
 
+.page__menu #map {
+  min-height: 68vh;
+  width: 100%;
+}
+
 .page__links {
   min-height: 10vh;
   background-color: #fcfcfc;

@@ -18,6 +18,10 @@
     }    
     &__menu {
         min-height: 68vh;
+        #map {
+            min-height: 68vh;
+            width: 100%;
+        }
     }
     &__links {
         min-height: 10vh;
