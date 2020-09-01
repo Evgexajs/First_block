@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Bike shop</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
-<body style="height: 100vh; display: flex; justify-content: center; align-items: center;">
-    <div id="map"></div>
+<body>    
+    <div class="page">
+        <div class="page__header">
+            <div class="page__logo"><img src="img/logo.png" alt=""></div>
+        </div>
+        <div class="page__navigation">
+            <ul class="page__navbar" style="padding-inline-start: 0px;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="page__menu" style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div id="map"></div>
+        </div>
+        <div class="page__links">
+            <h3 style="text-align: center;">Aside block</h3>
+        </div>
+        <div class="page__footer">
+            <p>2020 © BIKESHOP</p>
+        </div>
+    </div>
     <script>
         function initMap() {
             var location = {lat: 55.755825, lng: 37.617298}
@@ -17,8 +37,6 @@
             });
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj5V1qrLSHLgAU75bY0AuFaClfQwzBb74&callback=initMap" async defer>
-
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj5V1qrLSHLgAU75bY0AuFaClfQwzBb74&callback=initMap" async defer></script>
 </body>
 </html>
