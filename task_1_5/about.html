@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var location = {lat: 55.755825, lng: 37.617298}
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10,
+                center: location
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj5V1qrLSHLgAU75bY0AuFaClfQwzBb74&callback=initMap" async defer>
+
+    </script>
+</body>
+</html>
