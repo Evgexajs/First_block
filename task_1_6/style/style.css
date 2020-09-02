@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Roboto';
+  color: #878787;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Robotolight.woff) format("woff");
+}
+
+.todo-list {
+  width: 250px;
+  color: #8a999a;
+}
+
+.todo-list__header {
+  border: 1px solid #d0d0d0;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  margin: 0;
+  padding: 10px;
+  color: #5f6b78;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e5e5e5), to(#fbfbfb));
+  background: linear-gradient(0deg, #e5e5e5 0%, #fbfbfb 100%);
+}
+
+.todo-list__checkbox {
+  border: 1px solid #d0d0d0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.todo-list__do {
+  border-bottom: 1px solid #f7f8f9;
+}
+
+.todo-list__do_last {
+  border-bottom: none;
+}
+
+.todo-list__do input[type=checkbox] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.todo-list__do label {
+  position: relative;
+  display: block;
+  padding: 20px 25px;
+  cursor: pointer;
+}
+
+.todo-list__do label::before {
+  content: '';
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  border: 3px solid #8a999a;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 5px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+label .todo-list__img {
+  position: absolute;
+  left: 32px;
+  top: 27px;
+  height: 20px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  opacity: 0;
+}
+
+.todo-list__do input[type=checkbox]:checked + label .todo-list__img {
+  opacity: 1;
+}
+
+label .todo-list__label {
+  position: relative;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+label .todo-list__label::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  top: 50%;
+  height: 2px;
+  background-color: #4dc073;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.todo-list__do input[type=checkbox]:checked + label .todo-list__label {
+  color: #4dc073;
+}
+
+.todo-list__do input[type=checkbox]:checked + label .todo-list__label::after {
+  right: 0;
+}
+
+.todo-list__do input[type=checkbox]:checked + label::before {
+  border: 3px solid #4dc073;
+}
+/*# sourceMappingURL=style.css.map */

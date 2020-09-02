@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    color: #878787;
+
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(/fonts/Robotolight.woff) format("woff");
+}
+
+.todo-list {
+    width: 250px;
+    color: #8a999a;
+
+    &__header {
+        border: 1px solid #d0d0d0;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        margin: 0;
+        padding: 10px;
+        color: #5f6b78;
+        background: linear-gradient(0deg, rgba(229,229,229,1) 0%, rgba(251,251,251,1) 100%);
+    }
+
+    &__checkbox {        
+        border: 1px solid #d0d0d0;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    &__do {
+        border-bottom: 1px solid #f7f8f9;
+        &_last {
+            border-bottom: none;
+        }
+        input[type=checkbox] {
+            position: absolute;
+            width: 0;
+            height: 0;
+            visibility: hidden;            
+        }
+
+        label {
+            position: relative;
+            display: block;
+            padding: 20px 25px;
+            cursor: pointer;
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 26px;
+                height: 26px;
+                border: 3px solid #8a999a;
+                border-radius: 50%;
+                vertical-align: middle;
+                margin-right: 5px;
+                transition: .3s ease-in-out;
+            }
+        }
+    }
+
+    label &__img {
+        position: absolute;
+        left: 32px;
+        top: 27px;
+        height: 20px;
+        transition: .3s ease-in-out;
+        opacity: 0;     
+    }
+    &__do input[type=checkbox]:checked + label &__img {
+        opacity: 1;
+    }
+
+    label &__label {
+        position: relative;
+        transition: .3s ease-in-out;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 100%;
+            top: 50%;
+            height: 2px;
+            background-color: #4dc073;
+            transition: .3s ease-in-out;
+        }
+    }
+    &__do input[type=checkbox]:checked + label &__label {
+        color: #4dc073;
+        &::after {
+            right: 0;
+        }
+    }
+    &__do input[type=checkbox]:checked + label::before {
+        border: 3px solid #4dc073;
+    }
+}
+
