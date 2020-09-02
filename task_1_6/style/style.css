@@ -82,13 +82,11 @@ label .todo-list__img {
   left: 32px;
   top: 27px;
   height: 20px;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-  opacity: 0;
+  display: none;
 }
 
 .todo-list__do input[type=checkbox]:checked + label .todo-list__img {
-  opacity: 1;
+  display: block;
 }
 
 label .todo-list__label {
