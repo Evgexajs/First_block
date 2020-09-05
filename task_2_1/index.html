@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>Dialog</title>
+	<link href="style/jquery-ui.css" rel="stylesheet">
+	<style>
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	</style>
+</head>
+<body>
+<p>
+	<button id="dialog-link" class="ui-button ui-corner-all ui-widget">
+		<span class="ui-icon ui-icon-newwin"></span>Open Dialog
+	</button>
+</p>
+<div id="dialog" title="Redirect to associated payment?">
+	<p>This load was paid on delivery. If load is updated successfully would you like to be redirected to the payment creation screen?</p>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script>
+$( "#dialog" ).dialog({
+	autoOpen: false,
+	width: 450,
+	buttons: [
+		{
+			text: "Yes",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		},
+		{
+			text: "No",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		}
+	]
+});
+
+// Link to open the dialog
+$( "#dialog-link" ).click(function( event ) {
+	$( "#dialog" ).dialog( "open" );
+	event.preventDefault();
+});
+</script>
+</body>
+</html>
