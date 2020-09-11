@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>task_2_2</title>
+	<link href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="style/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/javascript.js"></script>
+	<style>
+		input[type=radio] {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="form">
+		<div class="form__head"><h2>One-Way Airlines: Let's make a reservation</h2></div>
+			<div class="form__main">
+				<table width="100%" cellspacing="0" cellpadding="6">
+					<tr> 
+						<td align="right">Pick a departure date </td>
+						<td><input type="text" id="datepicker" name="datepicker"></td>
+					</tr>
+					<tr> 
+						<td align="right">Find an airport </td>
+						<td><input id="airport"></td>
+					</tr>
+					<tr> 
+						<td align="right">Meal Option</td>
+						<td>
+							<select id="meal">
+								<option>No meal</option>
+								<option>Breakfast</option>
+								<option>Breakfast and Dinner</option>
+							</select>
+						</td>
+					</tr>
+					<tr> 
+						<td align="right">Number of bags to check </td>
+						<td id="bags">
+							<input type="radio" name="bag" id="bag-1">
+							<label for="bag-1">0</label>
+							<input type="radio" name="bag" id="bag-2">
+							<label for="bag-2">1</label>
+							<input type="radio" name="bag" id="bag-3">
+							<label for="bag-3">2</label>
+						</td>
+					</tr>
+					<tr> 
+						<td align="right">Type of seat you'd like </td>
+						<td id="seat">
+							<input type="checkbox" name="radio-1" id="radio-1">
+							<label for="radio-1">Aisle</label>
+							<input type="checkbox" name="radio-1" id="radio-2">
+							<label for="radio-2">Window</label>
+							<input type="checkbox" name="radio-1" id="radio-3">
+							<label for="radio-3">Exit Row</label>
+							<input type="checkbox" name="radio-1" id="radio-4">
+							<label for="radio-4">Any seat</label>
+						</td>
+					</tr>
+					<tr>
+						<td align="right"></td>
+						<td><button class="button">Continue reservation process <span class="ui-icon ui-icon-circle-arrow-e"></span></button><td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
