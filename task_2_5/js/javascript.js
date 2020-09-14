@@ -4,9 +4,7 @@ $( function() {
     axis: 'y'
   });
   $( "ul, li" ).disableSelection();
-  $(".button").button(
-      
-  );
+  $(".button").button();
   $(".photo-grid img").draggable({
     revert: "invalid",
   });
