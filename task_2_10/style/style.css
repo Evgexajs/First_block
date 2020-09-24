@@ -16,6 +16,10 @@ body {
   padding: 10px;
 }
 
+.todo-list li {
+  list-style-type: none;
+}
+
 .todo-list h3 {
   margin: 10px 0;
 }
@@ -44,9 +48,17 @@ body {
   cursor: pointer;
 }
 
+.todo-list__completed {
+  height: 200px;
+}
+
 .todo-list__completed .todo-list__task {
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
+}
+
+.todo-list__completed .todo-list__task #check {
+  display: none;
 }
 
 @font-face {

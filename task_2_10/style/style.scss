@@ -11,6 +11,7 @@ body {
 }
 
 .todo-list {
+    li{list-style-type: none;}
     max-width: 600px;
     margin: auto;
     padding: 10px;   
@@ -43,9 +44,15 @@ body {
         }
     }
 
-    &__completed .todo-list__task {
-        background: rgba(0, 0, 0, 0.5);
-        color: #fff;
+    &__completed {
+        height: 200px;
+        .todo-list__task {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            #check {
+                display: none;
+            }
+        }
     }
 }
 

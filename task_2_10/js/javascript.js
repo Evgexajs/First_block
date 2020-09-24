@@ -9,7 +9,7 @@ $( function() {
                     p.remove();
                 })
             });
-            var check = $("<img src='image/check.png'>").click(function(){
+            var check = $("<img id='check' src='image/check.png'>").click(function(){
                 var p = $(this).parent();
                 p.fadeOut(function(){
                     $(".todo-list__completed").append(p);
@@ -23,5 +23,9 @@ $( function() {
             $(".todo-list__text").val("");
         }
     });
-
+    $( ".todo-list__not-completed, .todo-list__completed" ).sortable({
+        connectWith: ".connectedSortable",
+        axis: 'y',
+        dropOnEmpty: true,
+    }).disableSelection();
 } );
