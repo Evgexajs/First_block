@@ -1,19 +1,26 @@
-function myFunc() {
+function readyState() {
     
     document.querySelector("#button").onclick = function(){
-        var password = document.querySelector("#password").value,
-            confirmPassword = document.querySelector("#confirmPassword").value;
-            if (password != confirmPassword)
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        var password = document.querySelector("#password").value;
+        var name = document.querySelector("#name").value;
+        var email = document.querySelector("#email").value;
+        var confirmPassword = document.querySelector("#confirmPassword").value;
+        if (name == "")
+            alert("Enter name!");
+        else if (reg.test(email) == false)
+            alert("Enter email!");
+        else if (password == "")
+            alert("Enter password!");
+        else if (password != confirmPassword)
             {
                 alert("Password didn't math try again.");
             }
             else 
             {
                 alert("Successful login");
-                var name = document.querySelector("#name");
-                var email = document.querySelector("#email");
-                localStorage.setItem("name", name.value);
-                localStorage.setItem("email", email.value);
+                localStorage.setItem("name", name);
+                localStorage.setItem("email", email);
                 localStorage.setItem("password", password);
                 console.log(localStorage.getItem("name"));
                 console.log(localStorage.getItem("email"));
