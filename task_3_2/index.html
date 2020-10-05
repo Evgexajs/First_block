@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_3_2</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/javascript.js"></script>
+</head>
+<body>
+	<div class="form">
+        <div class="form__head"><h2> Choose model of bike</h2></div>
+        <form class="form__main">
+            <div class="form__el">
+                <label for="bikes">Bikes</label>
+                <select name="bikes" id="bikes" onchange="getSelectValue();">
+                    <option value="" selected disabled>Select bike</option>
+                    <option value="bike1">2021 Polygon Siskiu D5 - 27.5inch Dual Suspension Mountain Bike</option>
+                    <option value="bike2">2020 Polygon Path 3 Urban...</option>
+                    <option value="bike3">2019 Polygon Strattos S2....</option>
+                    <option value="bike4">Polygon Sierra Oosten - 26..</option>
+                    <option value="bike5">2021 Polygon Siskiu T7 Bike</option>
+                </select>
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="comment">Comment</label>
+                <textarea name="comment" id="comment" cols="" rows="4" style="resize: none;"></textarea>
+            </div>
+        </form>
+        <div class="form__head"><h2> Billing address</h2></div>
+        <form class="form__main">
+            <div class="form__el">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Last name">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="address">Street Address</label>
+                <input type="text" id="address" name="address" placeholder="Address">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="state">State or region</label>
+                <select name="state" id="state" onchange="getSelectValue();">
+                    <option value="" selected disabled>Select state or region</option>
+                    <option value="washington">Washington</option>
+                    <option value="oregon">Oregon</option>
+                    <option value="idaho">Idaho</option>
+                    <option value="montana">Montana</option>
+                    <option value="wyoming">Wyoming</option>
+                    <option value="california">California</option>
+                    <option value="texac">Texac</option>
+                    <option value="alaska">Alaska</option>
+                </select>
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="123456">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" placeholder="1234567890">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+        </form>
+        <div class="form__head"><h2> Delivery Address</h2></div>
+        <form class="form__main">
+            <div class="form__el">
+                <label for="name1">Name</label>
+                <input type="text" id="name1" name="name1" placeholder="Name">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="lname1">Last Name</label>
+                <input type="text" id="lname1" name="lname1" placeholder="Last name">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="address1">Street Address</label>
+                <input type="text" id="address1" name="address1" placeholder="Address">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="state1">State or region</label>
+                <select name="state1" id="state1" onchange="getSelectValue();">
+                    <option value="" selected disabled>Select state or region</option>
+                    <option value="washington">Washington</option>
+                    <option value="oregon">Oregon</option>
+                    <option value="idaho">Idaho</option>
+                    <option value="montana">Montana</option>
+                    <option value="wyoming">Wyoming</option>
+                    <option value="california">California</option>
+                    <option value="texac">Texac</option>
+                    <option value="alaska">Alaska</option>
+                </select>
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="zip1">Zip</label>
+                <input type="text" id="zip1" name="zip1" placeholder="123456">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="phone1">Phone</label>
+                <input type="text" id="phone1" name="phone1" placeholder="1234567890">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="check">Same as billing address</label>
+                <input type="checkbox" id="check" name="check" onclick="checks()" style="width: auto; display: inline-block;">
+            </div>
+        </form>
+        <div class="form__head"><h2> Delivery Date</h2></div>
+        <form class="form__main">
+            <div class="form__el">
+                <label for="year">Year</label>
+                <select onchange="years()" name="year" id="year">
+                    <option value="" selected disabled>Select year</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                </select>
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="month">Month</label>
+                <select onchange="months()" name="month" id="month">
+                    <option value="" selected disabled>Select month</option>
+                    <option value='January'>January</option>
+                    <option value='February'>February</option>
+                    <option value='March'>March</option>
+                    <option value='April'>April</option>
+                    <option value='May'>May</option>
+                    <option value='June'>June</option>
+                    <option value='July'>July</option>
+                    <option value='August'>August</option>
+                    <option value='September'>September</option>
+                    <option value='October'>October</option>
+                    <option value='November'>November</option>
+                    <option value='December'>December</option>
+                </select>
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="day">Day</label>
+                <select name="day" id="day">
+                    <option value="" selected disabled>Select day</option>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                    <option value='6'>6</option>
+                    <option value='7'>7</option>
+                    <option value='8'>8</option>
+                    <option value='9'>9</option>
+                    <option value='10'>10</option>
+                    <option value='11'>11</option>
+                    <option value='12'>12</option>
+                    <option value='13'>13</option>
+                    <option value='14'>14</option>
+                    <option value='15'>15</option>
+                    <option value='16'>16</option>
+                    <option value='17'>17</option>
+                    <option value='18'>18</option>
+                    <option value='19'>19</option>
+                    <option value='20'>20</option>
+                    <option value='21'>21</option>
+                    <option value='22'>22</option>
+                    <option value='23'>23</option>
+                    <option value='24'>24</option>
+                    <option value='25'>25</option>
+                    <option value='26'>26</option>
+                    <option value='27'>27</option>
+                    <option value='28'>28</option>
+                    <option value='29'>29</option>
+                    <option value='30'>30</option>
+                    <option value='31'>31</option>
+                </select>
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+        </form>
+
+        <div class="form__head"><h2> Payment</h2></div>
+        <form class="form__main">
+            <div class="form__el"style="display: flex; justify-content: center;">
+                <input type="button" id="visa" name="visa" value="Visa" style="margin: 5px;" onclick="visas()">
+                <input type="button" id="masterCard" name="masterCard" value="MasterCard" style="margin: 5px;" onclick="masterCards()">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="cNumber">Card number</label>
+                <input type="text" id="cNumber" name="cNumber" placeholder="4234567890123">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="expiration">Expiration</label>
+                <input type="text" id="expiration" name="expiration" placeholder="01.24">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="123">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+        </form>
+
+        <div class="form__head"><h2> Create account?</h2></div>
+        <form class="form__main">
+            <div class="form__el">
+                <label for="nameAcc">Name</label>
+                <input type="text" id="nameAcc" name="nameAcc" placeholder="Name">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="confirmPassword">Confirm password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+        </form>
+        <a href="#" class="submit" onclick="checkedInputs()">Submit</a>
+    </div>
+</body>
+</html>
