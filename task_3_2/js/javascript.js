@@ -150,40 +150,39 @@ function checkedInputs() {
     else 
     {
         document.querySelector(".submit").href = "result.html";
-        var string = '';
-        string = string + `<div class="form__head"><h2>Model of bike</h2></div>`;
-        string = string + `<div class="form__el_result"><p>Bike: </p><p> ${bikesValue} </p></div>`;
+        var string = `<div class="form__head"><h2>Model of bike</h2></div>
+        <div class="form__el_result"><p>Bike: </p><p> ${bikesValue} </p></div>`;
         if (commentValue != "") {
-            string = string + `<div class="form__el_result"><p>Comment: </p><p> ${commentValue}</p></div>`;
+            string += `<div class="form__el_result"><p>Comment: </p><p> ${commentValue}</p></div>`;
         }
-        string = string + `<div class="form__head"><h2> Billing address</h2></div>`;
-        string = string + `<div class="form__el_result"><p>Name: </p><p> ${nameValue} </p></div>`;
-        string = string + `<div class="form__el_result"><p>Last name: </p><p> ${lnameValue} </p></div>`;
-        string = string + `<div class="form__el_result"><p>Address: </p><p> ${addressValue} </p></div>`;
-        string = string + `<div class="form__el_result"><p>State: </p><p> ${stateValue} </p></div>`;
-        string = string + `<div class="form__el_result"><p>Zip: </p><p> ${zipValue} </p></div>`;
-        string = string + `<div class="form__el_result"><p>Phone: </p><p> ${phoneValue} </p></div>`;
+        string += `<div class="form__head"><h2> Billing address</h2></div>
+        <div class="form__el_result"><p>Name: </p><p> ${nameValue} </p></div>
+        <div class="form__el_result"><p>Last name: </p><p> ${lnameValue} </p></div>
+        <div class="form__el_result"><p>Address: </p><p> ${addressValue} </p></div>
+        <div class="form__el_result"><p>State: </p><p> ${stateValue} </p></div>
+        <div class="form__el_result"><p>Zip: </p><p> ${zipValue} </p></div>
+        <div class="form__el_result"><p>Phone: </p><p> ${phoneValue} </p></div>
+        <div class="form__head"><h2> Delivery Date</h2></div>
+        <div class="form__el_result"><p>Year: </p><p> ${yearValue} </p></div>
+        <div class="form__el_result"><p>Month: </p><p> ${monthValue} </p></div>
+        <div class="form__el_result"><p>Day: </p><p> ${dayValue} </p></div>
+        <div class="form__head"><h2> Payment </h2></div>
+        <div class="form__el_result"><p>Card number: </p><p> ${cNumberValue} </p></div>
+        <div class="form__el_result"><p>Expiration date: </p><p> ${expirationDateValue} </p></div>
+        <div class="form__el_result"><p>CVV: </p><p> ${cvvValue} </p></div>
+        <div class="form__head"><h2>Account</h2></div>
+        <div class="form__el_result"><p>Name: </p><p> ${nameAccValue} </p></div>
+        <div class="form__el_result"><p>Password: </p><p> ${passwordValue} </p></div>`;
         if (!document.getElementById("check").checked)
         {
-            string = string + `<div class="form__head"><h2> Delivery Address</h2></div>`;
-            string = string + `<div class="form__el_result"><p>Name: </p><p> ${name1Value} </p></div>`;
-            string = string + `<div class="form__el_result"><p>Last name: </p><p> ${lname1Value} </p></div>`;
-            string = string + `<div class="form__el_result"><p>Address: </p><p> ${address1Value} </p></div>`;
-            string = string + `<div class="form__el_result"><p>State: </p><p> ${state1Value} </p></div>`;
-            string = string + `<div class="form__el_result"><p>Zip: </p><p> ${zip1Value} </p></div>`;
-            string = string + `<div class="form__el_result"><p>Phone: </p><p> ${phone1Value} </p></div>`;
+            string += `<div class="form__head"><h2> Delivery Address</h2></div>
+            <div class="form__el_result"><p>Name: </p><p> ${name1Value} </p></div>
+            <div class="form__el_result"><p>Last name: </p><p> ${lname1Value} </p></div>
+            <div class="form__el_result"><p>Address: </p><p> ${address1Value} </p></div>
+            <div class="form__el_result"><p>State: </p><p> ${state1Value} </p></div>
+            <div class="form__el_result"><p>Zip: </p><p> ${zip1Value} </p></div>
+            <div class="form__el_result"><p>Phone: </p><p> ${phone1Value} </p></div>`;
         }
-        string = string + `<div class="form__head"><h2> Delivery Date</h2></div>`;
-        string = string + `<div class="form__el_result"><p>Year: </p><p> ${yearValue} </p></div>`;
-        string = string + `<div class="form__el_result"><p>Month: </p><p> ${monthValue} </p></div>`;
-        string = string + `<div class="form__el_result"><p>Day: </p><p> ${dayValue} </p></div>`;
-        string = string + `<div class="form__head"><h2> Payment </h2></div>`;
-        string = string + `<div class="form__el_result"><p>Card number: </p><p> ${cNumberValue} </p></div>`;
-        string = string + `<div class="form__el_result"><p>Expiration date: </p><p> ${expirationDateValue} </p></div>`;
-        string = string + `<div class="form__el_result"><p>CVV: </p><p> ${cvvValue} </p></div>`;
-        string = string + `<div class="form__head"><h2>Account</h2></div>`;
-        string = string + `<div class="form__el_result"><p>Name: </p><p> ${nameAccValue} </p></div>`;
-        string = string + `<div class="form__el_result"><p>Password: </p><p> ${passwordValue} </p></div>`;
         localStorage.setItem('data', string)
     }
 
