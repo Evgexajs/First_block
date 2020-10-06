@@ -29,6 +29,7 @@ body {
     &__el {
         position: relative;
         margin: 20px;
+        display: block;
         label {
             margin: 5px;
             display: inline-block;
@@ -71,6 +72,9 @@ body {
         width: 40vw;
         color: #fff;
         text-decoration: none;
+    }
+    .form__el_result {
+        display: flex;
     }
 
     .successSelect select{border: 2px solid #2ecc71;}
