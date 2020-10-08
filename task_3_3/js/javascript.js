@@ -16,6 +16,8 @@ function plusSlides(n) {
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
+  clearInterval(intervalId);
+  autoScroll();
 }  
 
 function showSlides(n) {
