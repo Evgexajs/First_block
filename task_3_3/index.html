@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/javascript.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <title>task_3_3</title>
+</head>
+<body onload="onLoad()">
+
+  <div id="modal-img">
+    <span onclick="document.getElementById('modal-img').style.display = 'none';" id="modal-img__close">&times;</span>
+    <img id="modal-img__content" src="#">
+  </div>
+    <div class="slideshow">
+    
+      <div class="slideshow__slide fade">
+        <img onclick="modals()" class="image" src="images/1.jpg" style="width:100%">
+      </div>
+    
+      <div class="slideshow__slide fade">
+        <img onclick="modals()" class="image" src="images/2.jpg" style="width:100%">
+      </div>
+    
+      <div class="slideshow__slide fade">
+        <img onclick="modals()" class="image" src="images/3.jpg" style="width:100%">
+      </div>
+    
+      <a class="slideshow__prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="slideshow__next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="slideshow__dot" onclick="currentSlide(1)"></span>
+      <span class="slideshow__dot" onclick="currentSlide(2)"></span>
+      <span class="slideshow__dot" onclick="currentSlide(3)"></span>
+    </div>
+</body>
+</html>
