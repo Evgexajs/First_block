@@ -1,12 +1,17 @@
 
 var slideIndex = 1;
+function autoScroll() {  
+  intervalId = window.setInterval(function () { showSlides(slideIndex += 1); }, 3000);
+}
 function onLoad() {
   showSlides(slideIndex);
-  intervalId = window.setInterval(function () { showSlides(slideIndex += 1); }, 3000);
+  autoScroll();
 }
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
+  clearInterval(intervalId);
+  autoScroll();
 }
 
 function currentSlide(n) {
