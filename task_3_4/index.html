@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+    <title>task_3_4</title>
+    <link rel = "stylesheet" href = "src/css/vanilla-calendar.css">
+    <script src = "src/js/vanilla-calendar.js"> </script>
+	<link rel="stylesheet" href="style/style.css">
+	<script src="js/javascript.js"></script>
+</head>
+<body onload="onLoad()">
+    <div class="form">
+        <div class="form__head"><h2> Customer page</h2></div>
+        <form class="form__main">
+            <div class="form__el">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Last name">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">                
+                <label for="calendar">Select date</label>
+                <div id = "myCalendar" class = "vanilla-calendar"> </div>
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <h3 style="text-align: center;">Payment method</h3>
+                <div style="display: flex; justify-content: center;">
+                    <input type="button" id="visa" name="visa" value="Visa" style="margin: 5px;" onclick="visas()">
+                    <input type="button" id="masterCard" name="masterCard" value="MasterCard" style="margin: 5px;" onclick="masterCards()">
+                    <img src="image/check.png" class="check">
+                    <img src="image/exclamation.png" class="exclamation">
+                    <small>Error message</small>
+                </div>
+            </div>
+            <div class="form__el">
+                <label for="cNumber">Card number</label>
+                <input type="text" id="cNumber" name="cNumber" placeholder="4234567890123">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="expiration">Expiration date</label>
+                <input type="text" id="expiration" name="expiration" placeholder="01.24">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="123">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <h3 style="text-align: center;">Discount</h3>
+                <br>
+                <label style= "text-align: center;" class="discount">you don't have discount, after first buying you get 5% discount</label>
+            </div>
+        </form>
+        <div style="display: flex; justify-content: center;"><a href="#" class="submit" onclick="checkedInputs()">Submit</a></div>
+    </div>
+</body>
+</html>
