@@ -44,22 +44,18 @@ function handleGetCurrentPosition(location){
             else if (beaufort_scale < 32.6){beaufort_scale = 'Violent storm'}
             else if (beaufort_scale > 32.7){beaufort_scale = 'Hurricane force'};
             wind_direction = data.wind.deg;
-            if (wind_direction > 11.25 && wind_direction < 33.75){wind_direction = 'North-northeast'}
-            else if (wind_direction < 56.25){wind_direction = 'North-east'}
-            else if (wind_direction < 78.75){wind_direction = 'East-northeast'}
-            else if (wind_direction < 101.25){wind_direction = 'East'}
-            else if (wind_direction < 123.75){wind_direction = 'East-southeast'}
-            else if (wind_direction < 146.25){wind_direction = 'South-east'}
-            else if (wind_direction < 168.75){wind_direction = 'South-southeast'}
-            else if (wind_direction < 191.25){wind_direction = 'South'}
-            else if (wind_direction < 213.75){wind_direction = 'South-southwest'}
-            else if (wind_direction < 236.25){wind_direction = 'South-west'}
-            else if (wind_direction < 258.75){wind_direction = 'West-southwest'}
-            else if (wind_direction < 281.25){wind_direction = 'West'}
-            else if (wind_direction < 303.75){wind_direction = 'West-northwest'}
-            else if (wind_direction < 326.25){wind_direction = 'North-west'}
-            else if (wind_direction < 348.75){wind_direction = 'North-northwest'}
-            else if (wind_direction > 348.74 && wind_direction < 11.26){wind_direction = 'North'}
+            var arr_wind = ['North-northeast', 'North-east', 'East-northeast', 
+            'East', 'East-southeast', 'South-east', 'South-southeast',
+            'South', 'South-southwest', 'South-west', 'West-southwest',
+            'West', 'West-northwest', 'North-west', 'North-northwest', 'North'];
+            coefficient = 3;
+            arr_wind.forEach(function(item, i, arr_wind) {
+                if (wind_direction > (11.25 * (coefficient - 2)) && wind_direction < (11.25 * coefficient))
+                    wind_direction = arr_wind[i];
+                else if (wind_direction < 11.25)
+                    wind_direction = arr_wind[15];
+                coefficient += 2;
+            });
 
             sunset = new Date(data.sys.sunset * 1000);
             sunrise = new Date(data.sys.sunrise * 1000);
