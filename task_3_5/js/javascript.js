@@ -125,7 +125,6 @@ function handleGetCurrentPosition(location){
             `;
             }
             string += "</table>";
-            console.log(string);
             document.querySelector(".weather-fivedays").innerHTML = string;
         })
         .catch(function () {
