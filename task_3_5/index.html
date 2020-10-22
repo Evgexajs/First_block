@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_3_5</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/javascript.js"></script>
+</head>
+<body onload="onLoad()">
+    <div class="weather">
+        <div class="weather__head">
+            <h1>Weather in London, GB</h1>
+        </div>
+        <div class="weather__temp">
+            <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="">
+            <p>11&deg;C</p>
+        </div>
+        <div class="weather__cloud">
+            Haze
+        </div>        
+        <div class="weather__time">
+            15:01 Dec 21
+        </div>
+        <div class="weather__main">
+            <table>
+                <tr><td>Wind</td><td>Gentle Breeze, 4.1 m/s West-southwest (250)</td></tr>
+                <tr><td>Cloudiness</td><td>Overcast cloud</td></tr>
+                <tr><td>Pressure</td><td>1035 hpa</td></tr>
+                <tr><td>Humidity</td><td>93%</td></tr>
+                <tr><td>Sunrise</td><td>10:04</td></tr>
+                <tr><td>Sunset</td><td>17:53</td></tr>
+                <tr><td>Geo coords</td><td>[51.51, -0.13]</td></tr>
+            </table>
+        </div>
+    </div>
+    <div class="weather-fivedays">
+        <h1>Hourly weather and forecasts in London, GB</h1>
+        <table>
+            <tr class="weather-fivedays__date"><td colspan="2"><h2>Thu Dec 21 2017 Today</h2></td></tr>
+            <tr>
+                <td class="weather-fivedays__right">
+                    17:00
+                    <img src="http://openweathermap.org/img/wn/50d@2x.png" align="center">
+                </td>
+                <td>
+                    <span class="weather-fivedays__temp">11.3&deg;C</span> <i>light rain</i><br>
+                    <p>3,67 m/s clouds: 88% 1040,76 hpa </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="weather-fivedays__right">
+                    17:00
+                    <img src="http://openweathermap.org/img/wn/50d@2x.png" align="center">
+                </td>
+                <td>
+                    <span class="weather-fivedays__temp">11.3&deg;C</span> <i>light rain</i><br>
+                    <p>3,67 m/s clouds: 88% 1040,76 hpa </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="weather-fivedays__right">
+                    17:00
+                    <img src="http://openweathermap.org/img/wn/50d@2x.png" align="center">
+                </td>
+                <td>
+                    <span class="weather-fivedays__temp">11.3&deg;C</span> <i>light rain</i><br>
+                    <p>3,67 m/s clouds: 88% 1040,76 hpa </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
