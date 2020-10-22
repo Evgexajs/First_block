@@ -16,18 +16,12 @@ function handleGetCurrentPosition(location){
             document.querySelector(".weather__cloud").innerHTML = data.weather[0]['description'];
             var date = new Date();
             month = date.getMonth();
-            if (date.getMonth() === 0){month = 'Jan'}
-            else if (date.getMonth() === 1){month = 'Feb'}
-            else if (date.getMonth() === 2){month = 'March'}
-            else if (date.getMonth() === 3){month = 'Apr'}
-            else if (date.getMonth() === 4){month = 'May'}
-            else if (date.getMonth() === 5){month = 'Jun'}
-            else if (date.getMonth() === 6){month = 'Jul'}
-            else if (date.getMonth() === 7){month = 'Aug'}
-            else if (date.getMonth() === 8){month = 'Sep'}
-            else if (date.getMonth() === 9){month = 'Oct'}
-            else if (date.getMonth() === 10){month = 'Nov'}
-            else if (date.getMonth() === 11){month = 'Dec'}
+            arrMonth = ['Jan', 'Feb', 'March', 'Apr', 'May', 'Jun',
+            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',]
+            arrMonth.forEach(function(item, i, arrMonth) {
+                if (i === month)
+                   month = arrMonth[i];
+            });
             document.querySelector(".weather__time").innerHTML = `${date.getHours()}:${date.getMinutes()} ${month} ${date.getDate()}`;
             beaufort_scale = data.wind.speed;
             if (beaufort_scale < 0.5){beaufort_scale = 'Calm'}
@@ -44,16 +38,16 @@ function handleGetCurrentPosition(location){
             else if (beaufort_scale < 32.6){beaufort_scale = 'Violent storm'}
             else if (beaufort_scale > 32.7){beaufort_scale = 'Hurricane force'};
             wind_direction = data.wind.deg;
-            var arr_wind = ['North-northeast', 'North-east', 'East-northeast', 
+            var arrWind = ['North-northeast', 'North-east', 'East-northeast', 
             'East', 'East-southeast', 'South-east', 'South-southeast',
             'South', 'South-southwest', 'South-west', 'West-southwest',
             'West', 'West-northwest', 'North-west', 'North-northwest', 'North'];
             coefficient = 3;
-            arr_wind.forEach(function(item, i, arr_wind) {
+            arrWind.forEach(function(item, i, arrWind) {
                 if (wind_direction > (11.25 * (coefficient - 2)) && wind_direction < (11.25 * coefficient))
-                    wind_direction = arr_wind[i];
+                    wind_direction = arrWind[i];
                 else if (wind_direction < 11.25)
-                    wind_direction = arr_wind[15];
+                    wind_direction = arrWind[15];
                 coefficient += 2;
             });
 
@@ -81,26 +75,18 @@ function handleGetCurrentPosition(location){
             {
             var date = new Date(data.list[i]['dt'] * 1000);
             day = date.getDay();
-            if (date.getDay() === 0){day = 'Mon'}
-            else if (date.getDay() === 1){day = 'Tue'}
-            else if (date.getDay() === 2){day = 'Wed'}
-            else if (date.getDay() === 3){day = 'Thu'}
-            else if (date.getDay() === 4){day = 'Fri'}
-            else if (date.getDay() === 5){day = 'Sat'}
-            else if (date.getDay() === 6){day = 'Sun'}
+            arr_day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+            arr_day.forEach(function(item, i, arr_day) {
+                if (i === day)
+                   day = arr_day[i];
+            });
             month = date.getMonth();
-            if (date.getMonth() === 0){month = 'Jan'}
-            else if (date.getMonth() === 1){month = 'Feb'}
-            else if (date.getMonth() === 2){month = 'March'}
-            else if (date.getMonth() === 3){month = 'Apr'}
-            else if (date.getMonth() === 4){month = 'May'}
-            else if (date.getMonth() === 5){month = 'Jun'}
-            else if (date.getMonth() === 6){month = 'Jul'}
-            else if (date.getMonth() === 7){month = 'Aug'}
-            else if (date.getMonth() === 8){month = 'Sep'}
-            else if (date.getMonth() === 9){month = 'Oct'}
-            else if (date.getMonth() === 10){month = 'Nov'}
-            else if (date.getMonth() === 11){month = 'Dec'}
+            arrMonth = ['Jan', 'Feb', 'March', 'Apr', 'May', 'Jun',
+            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',]
+            arrMonth.forEach(function(item, i, arrMonth) {
+                if (i === month)
+                   month = arrMonth[i];
+            });
             if (date.getHours() === 2)
             {
                 string += `<tr class="weather-fivedays__date"><td colspan="2"><h2>${day} ${month} ${date.getDate()} ${date.getFullYear()}</h2></td></tr>`;
