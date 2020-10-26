@@ -1,0 +1,87 @@
+.container {
+    padding: 20px;
+    border: 2px solid #969595;
+    border-radius: 5px;
+}
+
+
+body {    
+    display: flex;
+    justify-content: center;
+}
+
+.createAccount {
+    &__el {
+        
+        position: relative;
+        margin: 20px;
+        display: block;
+        max-width: 250px;
+        label {
+            margin: 6px;
+            display: inline-block;
+        }
+        input[type="text"],  input[type="password"]{
+            border: 2px solid #f0f0f0;
+            border-radius: 4px;
+            display: block;
+            padding: 10px;
+            width: 94%;
+        }
+        img {
+            visibility: hidden;
+            position: absolute;
+            top: 40px;
+            right: 10px;
+        }
+        small {
+            visibility: hidden;
+        }
+    }
+    .success {
+        .check {visibility: visible;}
+        input {border: 2px solid #2ecc71;}
+    }
+    
+    .error {
+        small {
+            visibility: visible; 
+            color: #e74c3c;
+        }
+        .exclamation {visibility: visible;}
+        input {border-color: #e74c3c;}
+    }
+
+}
+.submit {
+    text-align: center;
+    margin-top: 5px;
+    background-color: #8b8a88;
+    border: 10px solid #8b8a88;
+    border-radius: 5px;
+    height: 20px;
+    width: 90%;
+    color: #fff;
+    a {
+        color: #fff;
+        text-decoration: none;}
+}
+
+.card {
+    margin-top: 20px;
+    background-color: #8b8a88;
+    padding: 20px;
+    border-radius: 20px;
+    display: none;
+}
+
+@media (min-width: 750px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .createAccount {
+        max-width: 500px;
+    }
+}

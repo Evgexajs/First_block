@@ -1,0 +1,108 @@
+.container {
+  padding: 20px;
+  border: 2px solid #969595;
+  border-radius: 5px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.createAccount__el {
+  position: relative;
+  margin: 20px;
+  display: block;
+  max-width: 250px;
+}
+
+.createAccount__el label {
+  margin: 6px;
+  display: inline-block;
+}
+
+.createAccount__el input[type="text"], .createAccount__el input[type="password"] {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  padding: 10px;
+  width: 94%;
+}
+
+.createAccount__el img {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.createAccount__el small {
+  visibility: hidden;
+}
+
+.createAccount .success .check {
+  visibility: visible;
+}
+
+.createAccount .success input {
+  border: 2px solid #2ecc71;
+}
+
+.createAccount .error small {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+.createAccount .error .exclamation {
+  visibility: visible;
+}
+
+.createAccount .error input {
+  border-color: #e74c3c;
+}
+
+.submit {
+  text-align: center;
+  margin-top: 5px;
+  background-color: #8b8a88;
+  border: 10px solid #8b8a88;
+  border-radius: 5px;
+  height: 20px;
+  width: 90%;
+  color: #fff;
+}
+
+.submit a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.card {
+  margin-top: 20px;
+  background-color: #8b8a88;
+  padding: 20px;
+  border-radius: 20px;
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .createAccount {
+    max-width: 500px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
