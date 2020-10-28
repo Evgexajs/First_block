@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_3_7</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body onload="onLoad()">
+    <div class="form">
+        <div class="form__head"><h2> Sign up</h2></div>
+        <div class="form__step">
+            <p class="closed">Your info</p>
+            <p>Your preferences</p>
+        </div>
+        <form class="form__main" action="data.html">
+            <div class="form__el">
+                <label for="allergies">Food allergies</label>
+                <textarea name="comment" id="comment" cols="" rows="4" style="resize: none;"></textarea>
+            </div>
+            <div class="form__el">
+                <label for="frequency">Frequency</label>
+                <p><input type="radio" name="frequency" value="Weekly">Weekly</p>
+                <p><input type="radio" name="frequency" value="Biweekly">Biweekly</p>
+                <p><input type="radio" name="frequency" value="Monthly">Monthly</p>
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="package_size">Package size</label>
+                <p><input type="radio" name="package_size" value="Taste_test">Taste test</p>
+                <p><input type="radio" name="package_size" value="Healthy_Highlight">Healthy Highlight</p>
+                <p><input type="radio" name="package_size" value="Full_plate">Full plate</p>
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <input type="submit" class="submit" value="Sign up" onclick="checkedInputs()">
+        </form>
+    </div>
+    <script src="js/javascript.js"></script>
+</body>
+</html>

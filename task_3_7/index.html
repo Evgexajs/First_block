@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_3_7</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/javascript.js"></script>
+</head>
+<body>
+    
+    <div class="form">
+        <div class="form__head"><h2> Sign up</h2></div>
+        <div class="form__step">
+            <p>Your info</p>
+            <p class="closed">Your preferences</p>
+        </div>
+        <form class="form__main" action="order.html">
+            <div class="form__el">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>            
+            <div class="form__el">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Email">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" placeholder="1234567890">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>            
+            <div class="form__el">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Address">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="City">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="State">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <div class="form__el">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="123456">
+                <img src="image/check.png" class="check">
+                <img src="image/exclamation.png" class="exclamation">
+                <small>Error message</small>
+            </div>
+            <input type="submit" value="Next" src="order.html" onclick="checkedInputs()">
+        </form>
+    </div>
+</body>
+</html>

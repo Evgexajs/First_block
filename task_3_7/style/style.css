@@ -1,0 +1,162 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form {
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 20px;
+  color: #8b8a88;
+  background: #fefbf6;
+}
+
+.form__head {
+  margin: 5px;
+  color: #646267;
+  border-bottom: 2px solid #646267;
+}
+
+.form__head h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.form__step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__step p {
+  text-align: center;
+  border: 2px solid #000000;
+  background-color: #8b8a88;
+  color: #e8fa4b;
+  padding: 10px;
+}
+
+.form__step .closed {
+  text-align: center;
+  border: 2px solid #424242;
+  background-color: #5e5d5d;
+  color: #a7a7a7;
+  padding: 10px;
+}
+
+.form__main {
+  margin: 5px;
+}
+
+.form__main label {
+  margin-right: 10px;
+}
+
+.form__el {
+  position: relative;
+  margin: 20px;
+  display: block;
+}
+
+.form__el label {
+  margin: 5px;
+  display: inline-block;
+}
+
+.form__el input[type=text], .form__el input[type=textarea], .form__el textarea {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  padding: 10px;
+  width: 94%;
+}
+
+.form__el select {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  padding: 10px;
+  width: 100%;
+}
+
+.form__el img {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.form__el small {
+  visibility: hidden;
+  position: absolute;
+  bottom: -20px;
+  left: 5px;
+}
+
+.form .form__el_result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form .successSelect select {
+  border: 2px solid #2ecc71;
+}
+
+.form .errorSelect small {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+.form .errorSelect select {
+  border-color: #e74c3c;
+}
+
+.form .success .check {
+  visibility: visible;
+}
+
+.form .success input {
+  border: 2px solid #2ecc71;
+}
+
+.form .error small {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+.form .error .exclamation {
+  visibility: visible;
+}
+
+.form .error input {
+  border-color: #e74c3c;
+}
+
+input[type=submit] {
+  float: right;
+  text-align: center;
+  margin-top: 5px;
+  background-color: #8b8a88;
+  border: 2px solid #8b8a88;
+  border-radius: 2px;
+  width: 100px;
+  color: #fff;
+}
+
+.data {
+  margin: 20px;
+  padding: 10px;
+  color: #fff;
+  background-color: #8b8a88;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Robotolight.woff) format("woff");
+}
+/*# sourceMappingURL=style.css.map */

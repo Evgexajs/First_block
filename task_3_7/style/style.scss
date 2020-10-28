@@ -1,0 +1,123 @@
+
+body {    
+    display: flex;
+    justify-content: center;
+}
+.form {
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 20px;
+    color: #8b8a88;
+    background: #fefbf6;
+    &__head {
+        margin: 5px;
+        color: #646267;
+        border-bottom: 2px solid #646267;
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    &__step {
+        display: flex;
+        p {
+            text-align: center;
+            border: 2px solid #000000;
+            background-color: #8b8a88;
+            color:  #e8fa4b;
+            padding: 10px;
+        }
+        .closed {
+            text-align: center;
+            border: 2px solid #424242;
+            background-color: #5e5d5d;
+            color:  #a7a7a7;
+            padding: 10px;
+        }
+    }
+    
+    &__main {
+        margin: 5px;
+        label {margin-right: 10px;}
+    }
+
+    &__el {
+        position: relative;
+        margin: 20px;
+        display: block;
+        label {
+            margin: 5px;
+            display: inline-block;
+        }
+        input[type=text], input[type=textarea], textarea {
+            border: 2px solid #f0f0f0;
+            border-radius: 4px;
+            display: block;
+            padding: 10px;
+            width: 94%;
+        }
+
+        select {            
+            border: 2px solid #f0f0f0;
+            border-radius: 4px;
+            display: block;
+            padding: 10px;
+            width: 100%;
+        }
+        img {
+            visibility: hidden;
+            position: absolute;
+            top: 40px;
+            right: 10px;
+        }
+        small {
+            visibility: hidden;
+            position: absolute;
+            bottom: -20px;
+            left: 5px;
+        }
+    }
+    .form__el_result {
+        display: flex;
+    }
+
+    .successSelect select{border: 2px solid #2ecc71;}
+    .errorSelect {
+        small {visibility: visible; color: #e74c3c;}
+        select{border-color: #e74c3c;}
+    }
+    .success {
+        .check {visibility: visible;}
+        input {border: 2px solid #2ecc71;}
+    }
+    
+    .error {
+        small {visibility: visible; color: #e74c3c;}
+        .exclamation {visibility: visible;}
+        input {border-color: #e74c3c;}
+    }
+}
+
+input[type=submit] {
+    float: right;
+    text-align: center;
+    margin-top: 5px;
+    background-color: #8b8a88;
+    border: 2px solid #8b8a88;
+    border-radius: 2px;
+    width: 100px;
+    color: #fff;
+}
+
+.data {
+    margin: 20px;
+    padding: 10px;
+    color: #fff;
+    background-color:  #8b8a88;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(/fonts/Robotolight.woff) format("woff");
+}
