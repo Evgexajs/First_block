@@ -1,0 +1,16 @@
+.stickyDa {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+.sticky {
+  position: fixed;
+  z-index: 101;
+}
+
+.stop {
+  position: relative;
+  z-index: 101;
+}
+/*# sourceMappingURL=style.css.map */
