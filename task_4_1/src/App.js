@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import './style/style.css';
 
-class App extends Component {
+export class AppClass extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -30,4 +30,23 @@ class App extends Component {
   }
 }
 
-export default App;
+export function AppFunction () {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+      setCount(count + 1);
+  }
+
+  const decrement = () => {
+      setCount(count - 1);
+  }
+  return (
+      <div className="counters">
+        <div className="counters__text">
+          <h5>Counter: <span className="number">{count}</span> </h5>
+        </div>
+        <button onClick={increment} className="counters__add">+</button>
+        <button onClick={decrement} className="counters__sub">-</button>
+      </div>
+    );
+}
