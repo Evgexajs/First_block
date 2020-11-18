@@ -1,14 +1,33 @@
-import Counter from './component/counter';
-import Buttons from './component/buttons';
+import React, { Component } from 'react';
 import './style/style.css';
 
-function App() {
-  return (
-    <div className="counters">
-      <Counter />
-      <Buttons />
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      counter: 0,
+    }
+  }
+
+  increment = () => {
+    this.setState({counter: this.state.counter + 1});
+  }
+
+  decrement = () => {
+    this.setState({counter: this.state.counter - 1});
+  }
+
+  render () {
+    return (
+      <div className="counters">
+        <div className="counters__text">
+          <h5>Counter: <span className="number">{this.state.counter}</span> </h5>
+        </div>
+        <button onClick={this.increment} className="counters__add">+</button>
+        <button onClick={this.decrement} className="counters__sub">-</button>
+      </div>
+    );
+  }
 }
 
 export default App;
