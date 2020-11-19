@@ -1,25 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './style/style.css';
+import CounterFunction from './Counter.jsx';
+import CounterClass from './CounterClass.jsx';
 
-function AppFunction () {
-  const [count, setCount] = useState(0);
-
-  const increment = () => {
-      setCount(count + 1);
-  }
-
-  const decrement = () => {
-      setCount(count - 1);
-  }
+function App() {
   return (
-      <div className="counters">
-        <div className="counters__text">
-          <h5>Counter: <span className="number">{count}</span> </h5>
-        </div>
-        <button onClick={increment} className="counters__add">+</button>
-        <button onClick={decrement} className="counters__sub">-</button>
-      </div>
-    );
+    <div className="container">
+        <CounterFunction />
+        <CounterClass />
+    </div>
+  );
 }
 
-export default AppFunction;
+export default App;

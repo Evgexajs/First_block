@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style/style.css';
 
-class AppClass extends Component {
+class CounterClass extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -30,4 +30,4 @@ class AppClass extends Component {
   }
 }
 
-export default AppClass;
+export default CounterClass;
